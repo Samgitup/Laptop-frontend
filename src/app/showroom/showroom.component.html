@@ -1,0 +1,25 @@
+<h2> Showroom </h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> laptopShowroomName </th>
+            <th> location</th>
+            <th> phoneNumber</th>
+            <th> Action</th>
+        </tr>
+    </thead>
+
+<tbody>
+    <tr *ngFor="let showroom of showrooms ">
+        <td> {{ showroom.laptopShowroomName }} </td>
+        <td> {{ showroom.location }} </td>
+        <td> {{ showroom.phoneNumber }} </td>
+        <td>
+            <button (click) = "updateShowroom(showroom.showroomId)" class="btn btn-info shiyam"> Update</button>
+            <button (click) = "deleteShowroom(showroom.showroomId)" class="btn btn-danger " style="margin-left: 10px">
+                Delete</button>
+            <button (click) = "showroomDetails(showroom.showroomId)" class="btn btn-info " style="margin-left: 10px"> View</button>
+        </td>
+    </tr>
+</tbody>
+</table>
