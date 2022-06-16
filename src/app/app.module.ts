@@ -21,7 +21,6 @@ import { CommonModule } from '@angular/common';
     AdminComponent,
     NavbarComponent,
     RegisterComponent,
-    LoginComponent,
     ShowroomComponent,
     CreateShowroomComponent,
     UpdateShowroomComponent,
