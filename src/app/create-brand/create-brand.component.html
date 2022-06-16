@@ -1,0 +1,23 @@
+<div class="col-md-6 offset-md-3">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <ul class = "navbar-nav">
+            <li class="nav-item" (click)="goToBrandList()" class="nav-link"> Brand List
+
+            </li>
+    
+        </ul>
+ </nav>
+         <h3> Create Brand </h3>
+               <form (ngSubmit)="onSubmit()">
+
+                   <div class="form-group">
+                        <label> BrandName</label>
+                            <input type="text" class="form-control" id="brandName" 
+                            [(ngModel)]="brand.brandName"
+                             name="brandName">
+                   </div>
+   
+                       <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+</div>

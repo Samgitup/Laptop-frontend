@@ -21,6 +21,12 @@ export class CreateShowroomComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  goToShowroom(){
+  this.router.navigate(['/create-showroom']);
+  console.log("clicked")
+}
+
   goToShowroomList(){
     this.router.navigate(['/showrooms']);
   }
@@ -35,6 +41,8 @@ export class CreateShowroomComponent implements OnInit {
   onSubmit(){
     console.log(this.showroom);
     this.saveShowroom();
+  this.goToShowroomList();
+    }
   }
 
-}
+

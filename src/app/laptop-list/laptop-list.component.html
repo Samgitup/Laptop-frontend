@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item" (click)="goToLaptop()" class="nav-link">Add Laptop
+        </li>
+    </ul>
+</nav>
+<h2> Laptop </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> laptopName </th>
+            <th> price</th>
+            <th> version</th>
+
+            <th> Action</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let laptop of laptops ">
+            <td> {{ laptop.laptopName }} </td>
+            <td> {{ laptop.price }} </td>
+            <td> {{ laptop.version }} </td>
+
+            <td>
+                <button (click)="updatelaptop(laptop.laptopId)" class="btn btn-success"> Update</button>
+                <button (click)="deletelaptop(laptop.laptopId)" class="btn btn-danger " style="margin-left: 10px">
+                    Delete</button>
+
+                <button (click)="laptopDetails(laptop.laptopId)" class="btn btn-info " style="margin-left: 10px">
+                    View</button>
+
+
+            </td>
+        </tr>
+    </tbody>
+</table>

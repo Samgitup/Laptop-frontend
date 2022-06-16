@@ -1,0 +1,100 @@
+/* .he { background-color: black; } */
+/* .t{
+    background-image: url("img/sam6.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+}
+.he{
+    background-color: black;
+    background-size: cover;
+
+}
+.left-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;   
+}
+.update{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 33vh;
+}
+.Delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 34vh;
+    margin-top: 50px;
+   
+}
+.button{
+    margin-left: 65px;
+    margin-top: 35px;
+}
+
+.right-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    height: 100vh;
+    
+} */
+
+/* .form-group1{
+    margin-top: 70px;
+    width: 200px;
+    margin-left: 700px;
+    text-align: center;
+
+}
+
+.form-group2{
+    margin-top: 6px;
+    width: 200px;
+    margin-left: 700px;
+    text-align: center;
+
+}
+.form-group3{
+    margin-top: 6px;
+    width: 200px;
+    margin-left: 700px;
+    text-align: center;
+
+} */
+
+
+/* .form-control{
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 2px;
+
+} */
+/* .to{
+    width: 200px;
+    top: 30px;
+} */
+.f{
+    /* padding: 64px; */
+    border: 1px solid blue;
+    margin-left: 600px;
+}
+.form-class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 200px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+}

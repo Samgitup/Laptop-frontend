@@ -19,7 +19,7 @@ reg(){
   
   this.registerService.sregister(this.register).subscribe(data=>{
 alert("SuccessFully Registered ?")
-  },error=>alert("sorry not  Registered"));
+  },error=>alert("not Registered"));
 }
 
 

@@ -1,0 +1,32 @@
+<div class="col-md-6 offset-md-3">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a routerLink="laptops" routerLinkActive="active" class="nav-link">Laptop List</a>
+            </li>
+
+        </ul>
+    </nav>
+    <h3> Update Laptop </h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label> LaptopName</label>
+            <input type="text" class="form-control" id="laptopName" [(ngModel)]="laptopName" name="laptopName">
+        </div>
+
+        <div class="form-group">
+            <label> Price</label>
+            <input type="text" class="form-control" id="price" [(ngModel)]="laptopPrice" name="price">
+        </div>
+
+        <div class="form-group">
+            <label> Version</label>
+            <input type="text" class="form-control" id="version" [(ngModel)]="laptopVersion" name="version">
+        </div>
+
+
+
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>
