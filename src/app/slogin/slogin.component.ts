@@ -36,6 +36,9 @@ export class SloginComponent implements OnInit {
 
     
   }
+  goToLogOut(){
+    this.router.navigate(['/homepage'])
+  }
   
  onSubmit(){
    
@@ -52,7 +55,7 @@ export class SloginComponent implements OnInit {
         const parsedData = JSON.parse(data);
         this.cookies.set('jwt_token',parsedData.JWT,{expires : 30} )
       })
-      this.router.navigateByUrl('/homepage');
+      this.router.navigateByUrl('/showrooms');
       
    }else{
      alert("Admin doesn't exists");

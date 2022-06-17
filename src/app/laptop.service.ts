@@ -18,6 +18,10 @@ export class LaptopService {
     return this.httpClient.get<Laptop[]>(`${this.baseURL}/getlaptops`);
   }
 
+  getLaptopByBrandId(brandId:number):Observable<Laptop[]>{
+    return this.httpClient.get<Laptop[]>(`${this.baseURL}/getlaptops/${brandId}`);
+  }
+
   
   getLaptopById(laptopId: number): Observable<Laptop>{
     console.log(laptopId);

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="javascript:void(0);" routerLink="/">Welcome</a>
+    <!-- <li class="nav-item" (click)="goToAdmin()" style="color: white ; font-size: 2ch;" class="nav-link"> Admin
+
+    </li> -->
+    <li class = "nav-item" (click)="goToHomepage()"  style="margin-left: 1100px;color: white ;"   class="nav-link" >BackToHompage
+            
+    </li>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto"  >
+           
+           
+        </ul>
+
+    </div>
+  </nav>
+
+<body class="image">
+    <label class="text" style="color: white;" >Brands</label>
+    <div class="container">
+
+        <ul *ngFor="let brand of brands">
+            <div class="box-container">
+                <label class="head-text">BrandName</label>
+                <!-- <ul class="unhide" style="color:red"> {{ showroom.laptopShowroomName }}</ul> -->
+                <div class="unhide">
+                    <button (click)="goToLaptopList(brand.brandId)" class="btn btn-success"> {{ brand.brandName }}</button>
+
+                </div>
+
+          
+               
+
+                <ul class="navbar-nav">
+                    
+
+                </ul>
+
+            </div>
+
+        </ul>
+    </div>
+
+</body>
+
+
+

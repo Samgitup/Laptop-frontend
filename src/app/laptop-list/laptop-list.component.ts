@@ -4,6 +4,7 @@ import { Brand } from '../brand';
 import { BrandService } from '../brand.service';
 import { Laptop } from '../laptop';
 import { LaptopService } from '../laptop.service';
+import { Showroom } from '../showroom';
 
 @Component({
   selector: 'app-laptop-list',
@@ -11,20 +12,39 @@ import { LaptopService } from '../laptop.service';
   styleUrls: ['./laptop-list.component.css']
 })
 export class LaptopListComponent implements OnInit {
+  showrooms!:Showroom[];
   laptops!: Laptop[];
   getLaptopList: any;
   data: any;
-  brandId: any;
+  brandId!: number;
   brands!: Brand[];
+  showroomId!: number;
   constructor(private laptopService: LaptopService, private brandService: BrandService,
     private router: Router) { }
 
   ngOnInit(): void {
-    this.LaptopList();
+    // this.LaptopList();
+    this.showroomId=this.brandService.showroomId;
     this.brandId = this.brandService.brandId;
-    //  console.log(this.brandId,"????????????????????")
+
+    this.getLaptopByBrandId();
+     console.log(this.brandId,"passing in laptop list")
+  }
+  goToHomepage(){
+    this.router.navigate(['/homepage'])
   }
 
+/////////////////////////////////////////////
+  goToBack(){
+    this.router.navigate(['/brand-list'])
+  }
+
+  goToBrandList(showroomId:number){
+      
+    this.router.navigate([`brand-list`],{queryParams: {showroomId}});
+    this.brandService.setShowroomId(showroomId);
+  }
+/////////////////////////////////////////////
   goToLaptop(){
     this.router.navigate(['/create-laptop']);
   }
@@ -33,7 +53,17 @@ export class LaptopListComponent implements OnInit {
       this.laptops = data;
       console.log(this.laptops);
     });
+  
   }
+private getLaptopByBrandId(){
+  this.brandService.getLaptopByBrandId(this.brandId).subscribe((data: Laptop[]) => {
+    
+    this.laptops = data;
+    console.log(this.brandId)
+    console.log(this.laptops);
+  });
+}
+
 
   laptopDetails(laptopId: number) {
     this.router.navigate([`laptop-details/${laptopId}`]);

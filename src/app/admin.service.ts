@@ -9,7 +9,7 @@ import { Admin } from './admin';
 export class AdminService {
   constructor(private http:HttpClient) { }
   
-  private baseUrl = 'http://localhost:8092/admin';
+  private baseUrl = 'http://localhost:8092/abcd/admin';
 
    addAdmin(admin:Admin){
     return this.http.post(`${this.baseUrl}/addAdmin`,admin,{responseType: 'text'});

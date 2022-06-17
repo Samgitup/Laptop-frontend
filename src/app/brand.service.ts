@@ -43,13 +43,14 @@ export class BrandService {
   updateBrand( brandId:number,brandName:String,value:any): Observable<Object>{
     return this.httpClient.put(`${this.baseURL}/1updatebrand/${brandId}/${brandName}`,value);////id vennuna mattum use pannanuellate venna///
   }
-  // updateBrand(brandId:number, brand: Brand): Observable<Object>{
-  //   return this.httpClient.put(`${this.baseURL}/updatebrand`, brand);////id vennuna mattum use pannanuellate venna///
-  // }
+ 
   deleteBrand(brandId: number): Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/deletebrandbyid/${brandId}`);
   }
- 
+  /////////////////////////////////////////////////////////////////////////////
+  getLaptopByBrandId(brandId:number):Observable<Laptop[]>{
+    return this.httpClient.get<Laptop[]>(`${this.baseURL}/getlaptops/${brandId}`);
+  }
 
    getShowroomId(){
     return this.showroomId;

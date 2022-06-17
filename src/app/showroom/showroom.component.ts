@@ -42,6 +42,17 @@ export class ShowroomComponent implements OnInit {
   updateShowroom(showroomId: number){
     this.router.navigate([`update-showroom/${showroomId}`]);
   }
+  
+  goToHomepage(){
+    this.router.navigate(['/homepage'])
+  }
+
+  goToBrandList(showroomId:number){
+      
+    this.router.navigate([`brand-list`],{queryParams: {showroomId}});
+    this.brandservice.setShowroomId(showroomId);
+  }
+
 
   onSelect(value:any,showroomId: number){
     if(value==="laptop"){    

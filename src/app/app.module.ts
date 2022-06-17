@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
-import { FormGroup, FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ShowroomComponent } from './showroom/showroom.component';
@@ -31,6 +31,8 @@ import { LogComponent } from './log/log.component';
 import { SregisterComponent } from './sregister/sregister.component';
 import { SloginComponent } from './slogin/slogin.component';
 import { LoginComponent } from './login/login.component';
+import { UserBrandComponent } from './user-brand/user-brand.component';
+import { UserLaptopComponent } from './user-laptop/user-laptop.component';
 
 
 
@@ -61,6 +63,8 @@ import { LoginComponent } from './login/login.component';
     LogComponent,
     SregisterComponent,
     SloginComponent,
+    UserBrandComponent,
+    UserLaptopComponent,
  
    
   ],
@@ -70,7 +74,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpClientModule,
     CommonModule,
-    FormGroup
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

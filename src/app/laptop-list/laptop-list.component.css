@@ -1,0 +1,12 @@
+.table{
+    width: 900px;
+    margin-left: 100px;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+}
+.nav-link{
+    display: flex;
+    flex-direction: row;
+}

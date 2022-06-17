@@ -1,44 +1,61 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="javascript:void(0);" routerLink="/">Welcome</a>
+     <!-- <li class="nav-item" (click)="goToAdmin()" style="color: white ; font-size: 2ch;" class="nav-link"> Admin
+
+    </li>  -->
+    <li class="nav-item" (click)="goToLogOut()" style="color: white ; font-size: 2ch; margin-left: 1180px;" class="nav-link"> Back
+
+    </li>
+    
+</nav>
+<body class="image">
 <div class="bg-container">
     <div class="form-border ">
+        
         <form class="shadow-lg bg-card " [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+            <label style="margin-left: 310px; font-size: 3ch;" >Register Now</label>
             <div class="form-group">
-                <label class="form-title login-text" for="adminName">Name</label>
+                <label class="form-title login-text" style="margin-left: 50px;" for="adminName">Name</label>
                 <br>
                 <span class="span-field" *ngIf="adminName && adminName.invalid && adminName.touched">*Required</span>
-                <input type="text" id="adminName" placeholder="Enter Name" class="form-field form-control" formControlName="adminName"/>
+                <input type="text" id="adminName" placeholder="Enter Name" style="width: 600px;margin-left: 50px;" class="form-field form-control" formControlName="adminName"/>
                 
             </div>
             <br>
             <div class="form-group">
-                <label class="form-title login-text" for="adminEmail">Email</label>
+                <label class="form-title login-text"  style="margin-left: 50px;" for="adminEmail">Email</label>
                 <br>
                 <span class="span-field" *ngIf="adminEmail && adminEmail.invalid && adminEmail.touched">*Required</span>
-                <input type="text" id="adminEmail" placeholder="Ex: abc@gmail.com" class="form-field form-control" formControlName="adminEmail" required/>
+                <input type="text" id="adminEmail" placeholder="Ex: abc@gmail.com" style="width: 600px;margin-left: 50px;" class="form-field form-control" formControlName="adminEmail" required/>
             </div>
             <br>
             <div class="form-group">
-                <label class="form-title login-text" for="adminAge">Age </label>
+                <label class="form-title login-text"  style="margin-left: 50px;" for="adminAge">Age </label>
                 <br>
                 <span class="span-field" *ngIf="adminAge && adminAge.invalid && adminAge.touched">*Required</span>
-                <input type="text" id="adminAge" placeholder="Enter Age" class="form-field form-control" formControlName="adminAge"/>
+                <input type="text" id="adminAge" placeholder="Enter Age" class="form-field form-control"  style="width: 600px;margin-left: 50px;" formControlName="adminAge"/>
             </div>
             <br>
             <div class="form-group">
-                <label class="form-title login-text" for="password">Password </label>
+                <label class="form-title login-text" style="margin-left: 50px;"  for="password">Password </label>
                 <br>
                 <span class="span-field" *ngIf="password && password.invalid && password.touched">*Required</span>
-                <input type="text" id="password" placeholder="Enter Password" class="form-field form-control" formControlName="password"/>
+                <input type="text" id="password" placeholder="Enter Password" class="form-field form-control" style="width: 600px;margin-left: 50px;"  formControlName="password"/>
             </div>
             <div class="mt-1 mb-2 d-flex align-items-center">
-                <input type="checkbox" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'"> 
-                <label class="form-title" for="password" style="margin-left: 5px; font-size: 12px; color:aliceblue">Show password</label>
+                <input  style="margin-left: 30px;" type="checkbox"   onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'"> 
+                <label class="form-title"   for="password" style="margin-left: 20px; font-size: 13px; color:black">Show password</label>
             </div>
 
         
             <br>
             
             <div class="text-center">
+                
                 <button type="submit" class="btn btn-success m-0 border border-dark">Sign Up</button>
+                <div class="form-group">
+                    Already have account ? Please <a href="/slogin">Login</a>
+                 </div>
             </div>
             
         
@@ -47,3 +64,4 @@
 
 
 </div>
+</body>

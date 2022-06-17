@@ -14,16 +14,24 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LaptopDetailsComponent } from './laptop-details/laptop-details.component';
 import { LaptopListComponent } from './laptop-list/laptop-list.component';
 import { ShowroomComponent } from './showroom/showroom.component';
+import { SloginComponent } from './slogin/slogin.component';
 import { SregisterComponent } from './sregister/sregister.component';
 import { UpdateBrandComponent } from './update-brand/update-brand.component';
 import { UpdateLaptopComponent } from './update-laptop/update-laptop.component';
 import { UpdateShowroomComponent } from './update-showroom/update-showroom.component';
+import { UserBrandComponent } from './user-brand/user-brand.component';
+import { UserLaptopComponent } from './user-laptop/user-laptop.component';
 
 const routes: Routes = [
 
   {path: 'homepage',component: HomepageComponent},
   {path: '', redirectTo: 'homepage', pathMatch: 'full'},
+  {path: 'user-brand',component: UserBrandComponent},
+  {path: 'user-laptop',component: UserLaptopComponent},
+
+
   {path : 'sregister',component : SregisterComponent},
+  {path : 'slogin',component : SloginComponent},
   {path: 'showrooms', component: ShowroomComponent},
   {path: 'create-showroom', component: CreateShowroomComponent},
   // {path: '', redirectTo: 'showrooms', pathMatch: 'full'},

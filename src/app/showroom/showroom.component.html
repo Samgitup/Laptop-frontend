@@ -1,14 +1,20 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <ul class = "navbar-nav">
-        <li class = "nav-item" (click)="goToShowroomList()" class="nav-link" >Showroom List
+        <li class = "nav-item" (click)="goToShowroomList()" class="nav-link" >ShowroomList
            
         </li>
-        <li class = "nav-item" (click)="goToShowroom()" class="nav-link" >Add Showroom
+        <li class = "nav-item" (click)="goToShowroom()" class="nav-link" >AddShowroom
             
         </li>
+
+        <li class = "nav-item" (click)="goToHomepage()" style="margin-left: 1000px;" class="nav-link" >BackToHompage
+            
+        </li>
+        
+
     </ul>
   </nav>
-<h2> Showroom </h2>
+<h2> Showroom List </h2>
 <table class = "table table-striped">
     <thead>
         <tr>
@@ -30,13 +36,15 @@
                 Delete</button>
             
                 <button (click) = "showroomDetails(showroom.showroomId)" class="btn btn-info " style="margin-left: 10px"> View</button>
-        <label for="showrooms " style="margin-left: 10px"  class="btn btn-info ">Edit</label>
-        <select name="showroom" (change)="onSelect($any($event.target).value,showroom.showroomId)">
+        <!-- <label for="showrooms " style="margin-left: 10px"  class="btn btn-info ">Edit</label> -->
+        <!-- <select name="showroom" (change)="onSelect($any($event.target).value,showroom.showroomId)">
             
             <option vlaue="brand" selected="true" >Brand</option>
             <option value="laptop" selected="true" >Laptop</option>  
            
-          </select>
+          </select> -->
+          <button (click)="goToBrandList(showroom.showroomId)" for="brands " style="margin-left: 10px"
+                    class="btn btn-primary">Brand</button>
     
             </td>
     </tr>

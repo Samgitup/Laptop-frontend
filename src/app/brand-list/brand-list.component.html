@@ -1,14 +1,20 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <ul class="navbar-nav">
-        <li class="nav-item" (click)="goToBrandList()" class="nav-link"> 
+        
+        <li class="nav-item" (click)="goToBrand()" style="font-size: 2.1ch;color: white;" class="nav-link">AddBrand
 
         </li>
-        <li class="nav-item" (click)="goToBrand()" class="nav-link">Add Brand
+        <li class="nav-item" (click)="goToShowroomList()"  style="margin-left: 1000px;color: white;" class="nav-link">Back  
 
         </li>
+
+        <li class = "nav-item" (click)="goToHomepage()"  style="margin-left: 60px;color: white;"   class="nav-link" >BackToHompage
+            
+        </li>
+       
     </ul>
 </nav>
-<h2> Brand </h2>
+<h2> Brand List </h2>
 <table class="table table-striped">
     <thead>
         <tr>

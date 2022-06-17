@@ -36,7 +36,13 @@ export class BrandListComponent implements OnInit {
   goToBrandList() {
     this.router.navigate(['/brands']);
   }
+  goToHomepage(){
+    this.router.navigate(['/homepage'])
+  }
 
+  goToShowroomList(){
+    this.router.navigate([`showrooms`]);
+  }
 
   private getBrands() {
 

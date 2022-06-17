@@ -1,0 +1,33 @@
+.form-border{
+    width: 700px;
+    margin-top: 40px;
+    margin-left: 100px;
+ 
+}
+
+.bg-container{
+    width: 300px;
+    margin-left: 200px;
+    border: 2ch;
+    margin-top: 50px;
+    /* background-image: url("img/81.jpg"); */
+    /* text-align: center; */
+
+}
+
+.image{
+    background-image: url("img/301.jpg");
+   position: absolute;
+   background-position: center;
+   background-size: cover;
+   /* width: 100px; */
+   height: 599px;
+    
+  }
+  body,html{
+    width: 99.9%;
+    height: 99.2%;
+  }
+  .shadow-lg{
+    background-color: white;
+  }

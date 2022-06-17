@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators,ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AdminService } from '../admin.service';
 
@@ -38,6 +38,9 @@ export class SregisterComponent implements OnInit {
   get password(){
     return this.adminForm.get('password')
   }
+  goToLogOut(){
+    this.router.navigate(['/homepage'])
+  }
 
   public onSubmit(){
     this.adminservice.addAdmin(this.adminForm.value).subscribe(
@@ -46,7 +49,7 @@ export class SregisterComponent implements OnInit {
         console.log(data)
         //console.log(this.adminForm.value)
         alert("Signed up")
-        this.router.navigate(["/login"]);
+        this.router.navigate(["/slogin"]);
       },(error)=>{
         console.log(error);
         alert("check all fields unable to signup")

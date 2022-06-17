@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthserviceService {
-  private baseUrl = 'http://localhost:8092/admin';
+  private baseUrl = 'http://localhost:8092/abcd/admin';
   constructor(private http:HttpClient) { }
 
   generateToken(request:any){
@@ -15,6 +15,6 @@ export class AuthserviceService {
   welcome(token :string){
     let tokenStr ='Bearer ' + token;
     const headers = new HttpHeaders().set('Authorization',tokenStr);
-    return this.http.get<string>("http://localhost:8092/",{headers,responseType:'text' as 'json'});
+    return this.http.get<string>("http://localhost:8092/abcd/",{headers,responseType:'text' as 'json'});
   }
 }

@@ -1,0 +1,26 @@
+ .bg-container{
+    width: 500px;
+    margin-left: 500px;
+    border: 2ch;
+    margin-top: 50px;
+    /* background-image: url("img/81.jpg"); */
+    /* text-align: center; */
+
+}
+
+.image{
+  background-image: url("img/301.jpg");
+ position: absolute;
+ background-position: center;
+ background-size: cover;
+ /* width: 100px; */
+ height: 599px;
+  
+}
+body,html{
+  width: 99.9%;
+  height: 99.2%;
+}
+.form-container{background:#D3D3D3; border-radius: 20px; width: 60%; height: 50%;}
+.crediential-names{margin-left: 10px; margin-top: 20px;}
+.mail{margin-left: 10px;}

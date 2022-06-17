@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="javascript:void(0);" routerLink="/">Welcome</a>
+    <!-- <li class="nav-item" (click)="goToAdmin()" style="color: white ; font-size: 2ch;" class="nav-link"> Admin
+
+    </li> -->
+    <li class = "nav-item" (click)="goToHomepage()"  style="margin-left: 1100px;color: white ;"   class="nav-link" >BackToHompage
+            
+    </li>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto"  >
+           
+           
+        </ul>
+
+    </div>
+  </nav>
+
+
+<body class="image">
+    <label class="text" style="color: white;" >Laptops</label>
+    <div class="container">
+
+        <ul *ngFor="let laptop of laptops">
+            <div class="box-container">
+                <label class="head-text">LaptopName</label>
+               
+                <div class="unhide">
+                    <button  class="btn btn-success"> {{ laptop.laptopName }}</button>
+
+                </div>
+
+          
+                <div class="hide">
+                    <ul> Version :{{ laptop.version }}</ul>
+                    <ul> Price : {{ laptop.price }}</ul>
+                </div>
+
+                <ul class="navbar-nav">
+                  
+
+                </ul>
+
+            </div>
+
+        </ul>
+    </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
