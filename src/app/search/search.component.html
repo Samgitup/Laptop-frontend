@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<body class="image">
+    <label class="text" style="color: white;" >Laptop Showrooms</label>
+<div [hidden]="!submitted" class="serach">   
+    <form #f="ngForm" (ngSubmit)="onSubmit()" class="box">
+       
+          <div class="form-group">
+            <label for="name">Location</label><br>
+            <input required placeholder="Enter Location" type="text" class="form-control" id="district" 
+            [(ngModel)]="location" name="location">
+          </div>
+
+            <br>
+             <button [disabled]="f.invalid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+</div>
+<div [hidden]="submitted" class="box1"> 
+  <h4>Searched Location is Not available</h4>
+     </div>

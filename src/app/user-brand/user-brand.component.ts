@@ -35,4 +35,9 @@ export class UserBrandComponent implements OnInit {
   goToHomepage(){
     this.router.navigate(['/homepage'])
   }
+
+
+  goToShowroomList(){
+    this.router.navigate([`/homepage`]);
+  }
 }

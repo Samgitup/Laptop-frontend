@@ -3,7 +3,7 @@
      <!-- <li class="nav-item" (click)="goToAdmin()" style="color: white ; font-size: 2ch;" class="nav-link"> Admin
 
     </li>  -->
-    <li class="nav-item" (click)="goToLogOut()" style="color: white ; font-size: 2ch; margin-left: 1180px;" class="nav-link"> LogOut
+    <li class="nav-item" (click)="goToLogOut()" style="color: white ; font-size: 2ch; margin-left: 1260px;" class="nav-link"> Back
 
     </li>
     
@@ -12,7 +12,8 @@
 
 <div class="bg-container">
     <div class="form-container ">
-        <form [formGroup] = "loginForm" (ngSubmit) ="onSubmit()" class="m-3 mt-4" class="insidefrom">
+        <form [formGroup] = "loginForm" (ngSubmit) ="onSubmit()" class="m-3 mt-4" class="insidefrom" style="margin-top: 190px;">
+           <label style="margin-left: 120px;font-size: 2.5ch;">Login</label>
             <p  class="crediential-names mt-3 login-text">User Mail</p>
             <input type="text" placeholder="Enter mail"  formControlName="adminEmail" class="mail">
             <br> 

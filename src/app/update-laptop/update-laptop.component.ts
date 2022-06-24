@@ -75,7 +75,9 @@ saveLaptop(){
    {
     this.router.navigate(['/laptop-list']);
   }
-
+  goToLaptops(laptopId:number){
+    this.router.navigate(['/laptop-list']);
+  }
 
 }
 
@@ -95,6 +97,7 @@ saveLaptop(){
 
 
 // ngOnInit(): void {
+
 //   this.brandId = this.brandService.brandId;
 //   // console.log(this.brandId)
 //   this.laptopId = this.brandService.laptopId;
@@ -135,3 +138,9 @@ saveLaptop(){
 // //   , error => console.log(error));
  
 // }
+
+
+// this.laptopId =this.route.snapshot.params['laptopId'];
+// this.laptopService.getLaptopById(this.laptopId).subscribe(data =>{
+//   this.laptop=data;
+// },error =>console.log)

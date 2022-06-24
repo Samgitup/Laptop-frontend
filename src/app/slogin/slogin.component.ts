@@ -22,7 +22,7 @@ export class SloginComponent implements OnInit {
   ngOnInit(): void {
     const jwtToken = this.cookies.get('jwt_token');
     if(jwtToken){
-      this.router.navigateByUrl('/homepage');
+      this.router.navigateByUrl('/showrooms');
     }
 
     this.loginForm = new FormGroup({
@@ -54,7 +54,9 @@ export class SloginComponent implements OnInit {
     
         const parsedData = JSON.parse(data);
         this.cookies.set('jwt_token',parsedData.JWT,{expires : 30} )
+        console.log(parsedData)
       })
+      
       this.router.navigateByUrl('/showrooms');
       
    }else{

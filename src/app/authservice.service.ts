@@ -9,7 +9,7 @@ export class AuthserviceService {
   constructor(private http:HttpClient) { }
 
   generateToken(request:any){
-    return this.http.post<any>(`${this.baseUrl}/authenicate`,request,{responseType:'text' as 'json'})
+    return this.http.post<any>(`${this.baseUrl}/authenticate`,request,{responseType:'text' as 'json'})
   }
 
   welcome(token :string){

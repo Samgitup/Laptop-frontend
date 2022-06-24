@@ -1,8 +1,9 @@
  .bg-container{
     width: 500px;
-    margin-left: 500px;
+    margin-left: 600px;
     border: 2ch;
-    margin-top: 50px;
+    margin-top: 110px;
+    /* height: 530px; */
     /* background-image: url("img/81.jpg"); */
     /* text-align: center; */
 
@@ -14,13 +15,14 @@
  background-position: center;
  background-size: cover;
  /* width: 100px; */
- height: 599px;
+ height: 672px;
   
 }
 body,html{
   width: 99.9%;
   height: 99.2%;
 }
-.form-container{background:#D3D3D3; border-radius: 20px; width: 60%; height: 50%;}
-.crediential-names{margin-left: 10px; margin-top: 20px;}
+.form-container{background:#D3D3D3; border-radius: 20px; width: 60%; height: 55%; margin-top: 100px;}
+.crediential-names{margin-left: 10px; margin-top: 10px;}
 .mail{margin-left: 10px;}
+.crediential-names{margin-top: 11000px;}

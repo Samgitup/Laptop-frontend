@@ -33,6 +33,7 @@ import { SloginComponent } from './slogin/slogin.component';
 import { LoginComponent } from './login/login.component';
 import { UserBrandComponent } from './user-brand/user-brand.component';
 import { UserLaptopComponent } from './user-laptop/user-laptop.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -65,6 +66,7 @@ import { UserLaptopComponent } from './user-laptop/user-laptop.component';
     SloginComponent,
     UserBrandComponent,
     UserLaptopComponent,
+    SearchComponent,
  
    
   ],

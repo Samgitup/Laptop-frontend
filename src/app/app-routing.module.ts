@@ -13,6 +13,7 @@ import { DeleteShowroomComponent } from './delete-showroom/delete-showroom.compo
 import { HomepageComponent } from './homepage/homepage.component';
 import { LaptopDetailsComponent } from './laptop-details/laptop-details.component';
 import { LaptopListComponent } from './laptop-list/laptop-list.component';
+import { SearchComponent } from './search/search.component';
 import { ShowroomComponent } from './showroom/showroom.component';
 import { SloginComponent } from './slogin/slogin.component';
 import { SregisterComponent } from './sregister/sregister.component';
@@ -24,15 +25,22 @@ import { UserLaptopComponent } from './user-laptop/user-laptop.component';
 
 const routes: Routes = [
 
+
+  {path: 'serach',component: SearchComponent},
+  {path: '', redirectTo: 'serach', pathMatch: 'full'},
+
   {path: 'homepage',component: HomepageComponent},
-  {path: '', redirectTo: 'homepage', pathMatch: 'full'},
+  // {path: '', redirectTo: 'homepage', pathMatch: 'full'},
   {path: 'user-brand',component: UserBrandComponent},
   {path: 'user-laptop',component: UserLaptopComponent},
 
 
   {path : 'sregister',component : SregisterComponent},
   {path : 'slogin',component : SloginComponent},
+  
   {path: 'showrooms', component: ShowroomComponent},
+  {path: 'brands', component: BrandListComponent},
+  {path: 'laptops', component: LaptopListComponent},
   {path: 'create-showroom', component: CreateShowroomComponent},
   // {path: '', redirectTo: 'showrooms', pathMatch: 'full'},
   {path: 'update-showroom/:showroomId', component: UpdateShowroomComponent},

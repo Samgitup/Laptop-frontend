@@ -4,6 +4,7 @@ import { Brand } from '../brand';
 import { BrandService } from '../brand.service';
 import { Laptop } from '../laptop';
 import { LaptopService } from '../laptop.service';
+import { Showroom } from '../showroom';
 
 @Component({
   selector: 'app-user-laptop',
@@ -12,21 +13,28 @@ import { LaptopService } from '../laptop.service';
 })
 export class UserLaptopComponent implements OnInit {
 laptops!:Laptop[];
-
+showrooms!:Showroom[];
 getLaptopList: any;
 data: any;
 brandId: any;
 brands!: Brand[];
+  showroomId!: number;
 constructor(private laptopService: LaptopService, private brandService: BrandService,
   private router: Router) { }
 
 ngOnInit(): void {
  
   this.brandId = this.brandService.brandId;
+  this.showroomId = this.brandService.showroomId;
  this.goToLaptopList()
 
 }
 
+goToBrandList(showroomId:number){
+      
+  this.router.navigate([`user-brand`],{queryParams: {showroomId}});
+  this.brandService.setShowroomId(showroomId);
+}
 
 goToLaptopList(){
   this.brandService.getLaptopByBrandId(this.brandId).subscribe((data: Laptop[]) => {

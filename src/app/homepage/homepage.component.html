@@ -1,27 +1,27 @@
 <app-navbar></app-navbar>
+
 <body class="image">
-    <label class="text" style="color: white;" >Laptop Showrooms</label>
-    <div class="container">
+    <label class="text" style="color: white;">Laptop Showrooms</label>
+
+<div class="container">
 
         <ul *ngFor="let showroom of showrooms">
             <div class="box-container">
                 <label class="head-text">LaptopShowroomName</label>
-                <!-- <ul class="unhide" style="color:red"> {{ showroom.laptopShowroomName }}</ul> -->
                 <div class="unhide">
-                    <button (click)="goToBrandList(showroom.showroomId)" style="font-size: 2.7ch;" class="btn btn-success"> {{ showroom.laptopShowroomName }}</button>
+                    <button (click)="goToBrandList(showroom.showroomId)" style="font-size: 2.7ch;"
+                        class="btn btn-success"> {{ showroom.laptopShowroomName }}</button>
 
                 </div>
 
-          
+
                 <div class="hide">
                     <ul> Location :{{ showroom.location }}</ul>
                     <ul> Ph : {{ showroom.phoneNumber }}</ul>
                 </div>
 
                 <ul class="navbar-nav">
-                    <!-- <li class="nav-item" (click)="goToBrandList()" class="nav-link">Visit
 
-                    </li> -->
 
                 </ul>
 
@@ -50,6 +50,57 @@
 
 
 
+<!-- <body class="image">
+    <label class="text" style="color: white;" >Laptop Showrooms</label>
+<div [hidden]="submitted" class="serach">   
+    <form #f="ngForm" (ngSubmit)="onSubmit()" class="box">
+       
+          <div class="form-group">
+            <label for="name">Location</label><br>
+            <input required placeholder="Enter Location" type="text" class="form-control" id="district" 
+            [(ngModel)]="location" name="location">
+          </div>
+
+            <br>
+             <button [disabled]="f.invalid" type="submit" class="btn btn-primary">Submit</button>
+
+              <div [hidden]="!submitted" class="card"> 
+            <h4>Searched Location is Not available</h4>
+               </div>
+      
+        
+        
+    </form>
+
+</div> -->
+
+<!-- <div class="container">
+
+        <ul *ngFor="let showroom of showrooms">
+            <div class="box-container">
+                <label class="head-text">LaptopShowroomName</label>
+                <div class="unhide">
+                    <button (click)="goToBrandList(showroom.showroomId)" style="font-size: 2.7ch;" class="btn btn-success"> {{ showroom.laptopShowroomName }}</button>
+
+                </div>
+
+          
+                <div class="hide">
+                    <ul> Location :{{ showroom.location }}</ul>
+                    <ul> Ph : {{ showroom.phoneNumber }}</ul>
+                </div>
+
+                <ul class="navbar-nav">
+                
+
+                </ul>
+
+            </div>
+
+        </ul>
+    </div>
+
+</body> -->
 
 
 
@@ -88,6 +139,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <select name="Location" >
+    <option value="">--Please choose an Location--</option>
+    <option value="showroom.laptopShowroomName"  *ngFor="let showroom of showrooms"
+    >{{showroom.location}}</option>
+  
+</select> -->
 
 
 

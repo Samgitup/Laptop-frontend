@@ -3,6 +3,7 @@ import { Showroom } from '../showroom';
 import { Router } from '@angular/router';
 import { ShowroomService } from '../showroom.service';
 import { BrandService } from '../brand.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-showroom',
@@ -12,7 +13,7 @@ import { BrandService } from '../brand.service';
 export class ShowroomComponent implements OnInit {
   showrooms!: Showroom[];
   constructor(private showroomService: ShowroomService,private brandservice: BrandService,
-    private router: Router) { }
+  private cookies:CookieService,private router: Router) { }
     showroomId: any;
   ngOnInit(): void { 
     this.getShowrooms();
@@ -72,6 +73,13 @@ export class ShowroomComponent implements OnInit {
   }
   createShowroom(showroom:Showroom){
     this.router.navigate([`create-showroom`]);
+  }
+
+  onLogOut(){
+    this.cookies.delete('jwt_token');
+   
+    this.router.navigate(['/homepage'])
+    
   }
 
 }

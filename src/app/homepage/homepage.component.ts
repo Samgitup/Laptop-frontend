@@ -12,10 +12,23 @@ import { ShowroomService } from '../showroom.service';
 export class HomepageComponent implements OnInit {
   showrooms!: Showroom[];
   showroomId:any
-  constructor(private router:Router,private showroomService:ShowroomService,private brandservice:BrandService ) { }
+  location:String='';
+  submitted=false;
+
+
+  constructor(private router:Router,private showroomService:ShowroomService,private brandservice:BrandService ) { 
+
+    this.showroomService.getLocation().subscribe((data: Showroom[]) => {
+      this.showrooms = data;
+      console.log(this.showrooms);
+    });
+
+
+  }
 
   ngOnInit(): void {
-    this. getShowrooms()
+    // this. getShowrooms()
+    
   }
 
   private getShowrooms(){
@@ -32,5 +45,11 @@ goToBrandList(showroomId:number){
   this.router.navigate([`user-brand`],{queryParams: {showroomId}});
     this.brandservice.setShowroomId(showroomId);
 }
+
+
+
+
+
+
 
 }

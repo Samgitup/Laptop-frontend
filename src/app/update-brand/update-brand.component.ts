@@ -35,11 +35,16 @@ export class UpdateBrandComponent implements OnInit {
     , error => console.log(error));
    
   }
+  
 
 
   goToBrandList(){
     this.router.navigate(['/brand-list']);
   }
 
+  
+  goToBrands(showroomId:number){
+    this.router.navigate(['/brand-list']);
+  }
 
 }

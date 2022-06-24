@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Showroom } from './showroom';
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,9 @@ export class ShowroomService {
   private baseURL = "http://localhost:8092/abcd/shop";
 
   goToShowroomList: any;
+
+  
+  private resultLocation:any;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -28,4 +31,20 @@ export class ShowroomService {
   deleteShowroom(showroomId: number): Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/deleteshowroombyid/${showroomId}`);
   }
-}
+
+
+ 
+  setLocation(obj:any){
+    this.resultLocation=obj
+  }
+  getLocation(){
+    return of(this.resultLocation)
+  }
+
+  getShowroomByLocation(location:any):Observable<any>{
+    return this.httpClient.get(`${this.baseURL}/1getShowrooms/${location}`);
+    }
+
+  }
+
+

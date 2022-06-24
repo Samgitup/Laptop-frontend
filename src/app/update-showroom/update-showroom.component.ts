@@ -37,5 +37,7 @@ export class UpdateShowroomComponent implements OnInit {
   goToShowroomList(){
     this.router.navigate(['/showrooms']);
   }
-
+  goToShowroom(){
+    this.router.navigate(['/showrooms']);
+  }
 }
