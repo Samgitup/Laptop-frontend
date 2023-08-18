@@ -40,6 +40,13 @@ goToLaptopList(){
   this.brandService.getLaptopByBrandId(this.brandId).subscribe((data: Laptop[]) => {
     
     this.laptops = data;
+
+    if(!this.laptops?.length){
+      alert("Laptops Not  Available")
+       this.router.navigate(['user-brand'])
+    }else{
+      this.laptops;
+    }
     console.log(this.brandId)
     console.log(this.laptops);
   });

@@ -31,7 +31,7 @@ export class LaptopListComponent implements OnInit {
      console.log(this.brandId,"passing in laptop list")
   }
   goToHomepage(){
-    this.router.navigate(['/homepage'])
+    this.router.navigate(['/showrooms'])
   }
 
 /////////////////////////////////////////////

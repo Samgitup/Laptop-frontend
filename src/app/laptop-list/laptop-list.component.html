@@ -6,7 +6,7 @@
             <!-- style="margin-left: 1100px;"  -->
         </li>
 
-        <li class = "nav-item" (click)="goToHomepage()" style="margin-left: 60px;color: white;" class="nav-link" >BackToHompage
+        <li class = "nav-item" (click)="goToHomepage()" style="margin-left: 30px;color: white;" class="nav-link" >BackToShowroomPage
             
         </li>
        
@@ -33,12 +33,12 @@
             <td> {{ laptop.version }} </td>
 
             <td>
-                <button (click)="updatelaptop(laptop.laptopId)" class="btn btn-success"> Update</button>
-                <button (click)="deletelaptop(laptop.laptopId)" class="btn btn-danger " style="margin-left: 10px">
+                <button (click)="updatelaptop(laptop.laptopId)" class="btn btn-outline-secondary"> Update</button>
+                <button (click)="deletelaptop(laptop.laptopId)" class="btn btn-outline-danger " style="margin-left: 10px">
                     Delete</button>
 
-                <button (click)="laptopDetails(laptop.laptopId)" class="btn btn-info " style="margin-left: 10px">
-                    View</button>
+                <!-- <button (click)="laptopDetails(laptop.laptopId)" class="btn btn-info " style="margin-left: 10px">
+                    </button> -->
 
 
             </td>

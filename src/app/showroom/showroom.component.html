@@ -31,20 +31,14 @@
         <td> {{ showroom.location }} </td>
         <td> {{ showroom.phoneNumber }} </td>
         <td>
-            <button (click) = "updateShowroom(showroom.showroomId)" class="btn btn-success"> Update</button>
-            <button (click) = "deleteShowroom(showroom.showroomId)" class="btn btn-danger " style="margin-left: 10px">
+            <button (click) = "updateShowroom(showroom.showroomId)" class="btn btn-outline-secondary"> Update</button>
+            <button (click) = "deleteShowroom(showroom.showroomId)" class="btn btn-outline-danger " style="margin-left: 10px">
                 Delete</button>
             
-                <button (click) = "showroomDetails(showroom.showroomId)" class="btn btn-info " style="margin-left: 10px"> View</button>
-        <!-- <label for="showrooms " style="margin-left: 10px"  class="btn btn-info ">Edit</label> -->
-        <!-- <select name="showroom" (change)="onSelect($any($event.target).value,showroom.showroomId)">
-            
-            <option vlaue="brand" selected="true" >Brand</option>
-            <option value="laptop" selected="true" >Laptop</option>  
-           
-          </select> -->
+                <!-- <button (click) = "showroomDetails(showroom.showroomId)" class="btn btn-info " style="margin-left: 10px"> </button> -->
+ 
           <button (click)="goToBrandList(showroom.showroomId)" for="brands " style="margin-left: 10px"
-                    class="btn btn-primary">Brand</button>
+                    class="btn btn-outline-warning">Brand</button>
     
             </td>
     </tr>

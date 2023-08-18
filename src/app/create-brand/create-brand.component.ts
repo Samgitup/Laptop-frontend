@@ -15,6 +15,7 @@ brandName!: String;
   brandId:number=0;
   showroomId!: number;
   body: any;
+  submitted:boolean=true;
   constructor(private brandService:BrandService,
     private router:Router) { }
 

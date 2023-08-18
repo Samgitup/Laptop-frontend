@@ -1,14 +1,26 @@
 .serach {
     width: 300px;
   
-    margin-left: 610px;
+    margin-left: 540px;
   
   }
   
   .box{
-    background-color: white;
+    margin-top: 100px;
+    /* background-color: white; */
     height: 160px;
   }
   .box1{
-margin-left: 600px;
+margin-left: 510px;
   }
+  .nav{
+    background-color: black;
+  }
+.image{
+  background-image: url("img/s14.jpg");
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  width: 1518.1px;
+  height: 672px;
+}

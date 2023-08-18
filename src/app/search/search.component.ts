@@ -42,8 +42,14 @@ export class SearchComponent implements OnInit {
   }
   
   gotoList() {
-    // if(this.submitted===true){
+
       this.router.navigate(['homepage']);
-    // }
+    
+  }
+
+  goToSerach(): void{
+    window.location.reload();
+  
+    
   }
 }

@@ -7,25 +7,26 @@
         </ul>
     </nav>
     <h3> Create Laptop </h3>
-    <form (ngSubmit)="onSubmit()">
+    <div [hidden]="!submitted" class="serach"> 
+    <form #f="ngForm"  (ngSubmit)="onSubmit()">
 
 
         <div class="form-group">
             <label> LaptopName</label>
-            <input type="text" class="form-control" id="laptopName" [(ngModel)]="laptopName" name="laptopName">
+            <input  required placeholder=""type="text" class="form-control" id="laptopName" [(ngModel)]="laptopName" name="laptopName">
         </div>
 
         <div class="form-group">
             <label> Price</label>
-            <input type="text" class="form-control" id="price" [(ngModel)]="laptopPrice" name="price">
+            <input  required placeholder="" type="text" class="form-control" id="price" [(ngModel)]="laptopPrice" name="price">
         </div>
 
         <div class="form-group">
             <label> Version</label>
-            <input type="text" class="form-control" id="version" [(ngModel)]="laptopVersion" name="version">
+            <input  required placeholder="" type="text" class="form-control" id="version" [(ngModel)]="laptopVersion" name="version">
         </div>
-        
-        <button class="btn btn-success" type="submit">Submit</button>
+        <br>
+        <button  [disabled]="f.invalid" class="btn btn-success" type="submit">Submit</button>
     </form>
 </div>
 

@@ -8,16 +8,20 @@
         </ul>
  </nav>
          <h3> Create Brand </h3>
-               <form (ngSubmit)="onSubmit()">
+         <div [hidden]="!submitted" class="brand"> 
+               <form  #f="ngForm"(ngSubmit)="onSubmit()">
 
                    <div class="form-group">
                         <label> BrandName</label>
-                            <input type="text" class="form-control" id="brandName" 
+                            <input required placeholder="Enter BrandName" type="text" class="form-control" id="brandName" 
                             [(ngModel)]="brand.brandName"
                              name="brandName">
                    </div>
-   
-                       <button class="btn btn-success" type="submit">Submit</button>
+   <br>
+                       <button   [disabled]="f.invalid"  class="btn btn-success" type="submit">Submit</button>
 
                 </form>
+
+
+            </div>
 </div>

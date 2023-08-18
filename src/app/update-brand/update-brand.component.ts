@@ -24,6 +24,9 @@ export class UpdateBrandComponent implements OnInit {
     this.brandId = this.route.snapshot.params['brandId'];
     this.brandService.getBrandById(this.brandId).subscribe(data => {
       this.brand = data;
+
+    this.brandName=data.brandName;
+
     }, error => console.log(error));
   }
   async onSubmit(){

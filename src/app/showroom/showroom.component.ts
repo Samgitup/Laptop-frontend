@@ -78,7 +78,7 @@ export class ShowroomComponent implements OnInit {
   onLogOut(){
     this.cookies.delete('jwt_token');
    
-    this.router.navigate(['/homepage'])
+    this.router.navigate(['/serach'])
     
   }
 

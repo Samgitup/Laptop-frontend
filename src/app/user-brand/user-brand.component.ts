@@ -20,14 +20,30 @@ export class UserBrandComponent implements OnInit {
   ngOnInit(): void {
     this.showroomId = this.brandService.showroomId;
     this.getBrands();
+    // this.CheckBrands();
   }
+
+
+  
   getBrands(){
     this.brandService.getBrandsByShowroomId(this.showroomId).subscribe((data: Brand[]) => {
       this.brands = data;
+      if(!this.brands?.length){
+      
+       alert("Brands Not  Available")
+       this.router.navigate(['homepage'])
+        
+      }
+      else{
+      
+        this.brands;
+      
+      }
       console.log(this.showroomId)
       console.log(this.brands);
     });
   }
+
   goToLaptopList(brandId: any) {
     this.router.navigate([`user-laptop`], { queryParams: { brandId } });
     this.brandService.setBrandId(brandId);

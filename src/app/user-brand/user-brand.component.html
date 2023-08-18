@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="javascript:void(0);" routerLink="/">Welcome</a>
+    <a class="navbar-brand" href="javascript:void(0);" style="margin-left: 50px;" routerLink="/">Welcome</a>
     <!-- <li class="nav-item" (click)="goToAdmin()" style="color: white ; font-size: 2ch;" class="nav-link"> Admin
 
     </li> -->
 
-    <li class="nav-item" (click)="goToShowroomList()"  style="margin-left: 1150px;color: white;" class="nav-link">Back  
+    <li class="nav-item" (click)="goToShowroomList()"  style="margin-left: 1100px;color: white;font-size: 2ch;" class="nav-link">Back  
 
     </li>
-    <li class = "nav-item" (click)="goToHomepage()"  style="margin-left: 40px;color: white ;"   class="nav-link" >BackToHompage
+    <li class = "nav-item" (click)="goToHomepage()"  style="margin-left: 40px;color: white ;font-size: 2ch;"   class="nav-link" >BackToHompage
             
     </li>
 
@@ -29,7 +29,7 @@
                 <label class="head-text">BrandName</label>
                 <!-- <ul class="unhide" style="color:red"> {{ showroom.laptopShowroomName }}</ul> -->
                 <div class="unhide">
-                    <button (click)="goToLaptopList(brand.brandId)" class="btn btn-success"> {{ brand.brandName }}</button>
+                    <button (click)="goToLaptopList(brand.brandId)" class="btn btn-success" style="font-size: 2ch;"> {{ brand.brandName }}</button>
 
                 </div>
 

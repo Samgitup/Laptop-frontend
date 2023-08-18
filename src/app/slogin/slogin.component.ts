@@ -37,7 +37,7 @@ export class SloginComponent implements OnInit {
     
   }
   goToLogOut(){
-    this.router.navigate(['/homepage'])
+    this.router.navigate(['serach'])
   }
   
  onSubmit(){

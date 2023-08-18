@@ -10,7 +10,7 @@ import { LaptopService } from '../laptop.service';
   styleUrls: ['./create-laptop.component.css']
 })
 export class CreateLaptopComponent implements OnInit {
-
+  submitted:boolean=true;
   laptop : Laptop = new Laptop;
 
   laptopId!:number;

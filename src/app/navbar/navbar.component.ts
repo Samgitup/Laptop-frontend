@@ -13,6 +13,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 goToAdmin(){
-  this.router.navigate(['/sregister']);
+  this.router.navigate(['/slogin']);
+}
+
+goToSerach(){
+  this.router.navigate(['serach'])
 }
 }

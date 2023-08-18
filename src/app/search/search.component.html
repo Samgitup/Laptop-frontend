@@ -1,21 +1,31 @@
 <app-navbar></app-navbar>
+
 <body class="image">
-    <label class="text" style="color: white;" >Laptop Showrooms</label>
+  <h1 style="margin-left:550px ;">LaptopShowroom</h1>
+    <label class="text" style="color: white;" ></label>
 <div [hidden]="!submitted" class="serach">   
     <form #f="ngForm" (ngSubmit)="onSubmit()" class="box">
        
           <div class="form-group">
-            <label for="name">Location</label><br>
+            <label for="name" style="font-size: 4ch ;  font-weight: bold;margin-left: 90px;">Location</label><br>
             <input required placeholder="Enter Location" type="text" class="form-control" id="district" 
             [(ngModel)]="location" name="location">
           </div>
 
             <br>
-             <button [disabled]="f.invalid" type="submit" class="btn btn-primary">Submit</button>
+             <button [disabled]="f.invalid" type="submit" style="margin-left: 100px;" class="btn btn-primary">Serach</button>
+             
     </form>
 
 
 </div>
-<div [hidden]="submitted" class="box1"> 
-  <h4>Searched Location is Not available</h4>
-     </div>
+<div [hidden] ="submitted"  class="box1"> 
+  <h4 style="color: white;">Searched Location is Not available !!!!
+
+
+  </h4>
+
+  <button (click)="goToSerach()" style="margin-left: 150px;color:white;" class="nav">Back  
+
+  </button> 
+</div>

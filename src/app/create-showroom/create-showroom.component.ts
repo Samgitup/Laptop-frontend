@@ -13,6 +13,7 @@ import { of } from 'rxjs';
 })
 export class CreateShowroomComponent implements OnInit {
   showroom: Showroom = new Showroom();
+  submitted:boolean=true;
   constructor(private showroomService: ShowroomService,
     private router: Router) { }
 

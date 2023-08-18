@@ -31,13 +31,28 @@ export class UpdateLaptopComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    
-  }
+    this.laptopService.getLaptopById(this.laptopId).subscribe({
+      next : (data:any)=>{this.laptop=data,console.log(data)
+      
+      this.laptopName=data.laptopName;
+      this.laptopPrice=data.price;
+      this.laptopVersion=data.version;
+      
+      
+      
+      }
+    })
+
+
+   
+  
+}
 
 
 
 
 updateLap(){
+ 
   const updatelap:any={
     laptopId:0,
    laptopName: "",
@@ -96,51 +111,3 @@ saveLaptop(){
 
 
 
-// ngOnInit(): void {
-
-//   this.brandId = this.brandService.brandId;
-//   // console.log(this.brandId)
-//   this.laptopId = this.brandService.laptopId;
-
-// //     this.laptopId = this.route.snapshot.params['laptopId'];
-// //     console.log(this.laptopId)
-// //     this.brandId = this.route.snapshot.params['brandId'];
-// // console.log(this.brandId)
-// // this.brandService.getBrandById(this.brandId).subscribe(data => {
-// //   this.laptop.brand = data;
-// // }, error => console.log(error));
-
-
-//   this.laptopService.getLaptopById(this.laptopId).subscribe(data => {
-//     this.laptop = data;
-//   }, error => console.log(error));
-// }
-
-// async onSubmit(){
-
-//   // console.log(this.laptop);
-//   // console.log(this.updatelaptop);
-//   this.saveLaptop(this.brandId);
-// //   const updatelaptop = {
-// //     "laptopId":this.laptop.laptopId,
-// //    "laptopName": this.laptop.laptopName,
-// //    "price": this.laptop.price,
-// //    "version": this.laptop.version,
-  
-// //    "brand": {  
-// //      "brandId": this.brandId
-// //    }
-// //  }
-// //   this.goToLaptopList();
-// //   this.laptopService.updateLaptop(updatelaptop).subscribe( data =>{
-// //     this.goToLaptopList();
-// //   }
-// //   , error => console.log(error));
- 
-// }
-
-
-// this.laptopId =this.route.snapshot.params['laptopId'];
-// this.laptopService.getLaptopById(this.laptopId).subscribe(data =>{
-//   this.laptop=data;
-// },error =>console.log)

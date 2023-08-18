@@ -46,7 +46,9 @@ goToBrandList(showroomId:number){
     this.brandservice.setShowroomId(showroomId);
 }
 
-
+goToSerach(){
+  this.router.navigate(['serach'])
+}
 
 
 

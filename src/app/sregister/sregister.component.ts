@@ -39,7 +39,7 @@ export class SregisterComponent implements OnInit {
     return this.adminForm.get('password')
   }
   goToLogOut(){
-    this.router.navigate(['/homepage'])
+    this.router.navigate(['slogin'])
   }
 
   public onSubmit(){
@@ -52,7 +52,7 @@ export class SregisterComponent implements OnInit {
         this.router.navigate(["/slogin"]);
       },(error)=>{
         console.log(error);
-        alert("check all fields unable to signup")
+        alert("check all fields unable to Register")
         
       }
 

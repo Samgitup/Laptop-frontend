@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="javascript:void(0);" routerLink="/">Welcome</a>
+    <a class="navbar-brand" href="javascript:void(0);" style="margin-left: 50px;" routerLink="/">Welcome</a>
      <!-- <li class="nav-item" (click)="goToAdmin()" style="color: white ; font-size: 2ch;" class="nav-link"> Admin
 
     </li>  -->
-    <li class="nav-item" (click)="goToLogOut()" style="color: white ; font-size: 2ch; margin-left: 1260px;" class="nav-link"> Back
+    <li class="nav-item" (click)="goToLogOut()" style="color: white ; font-size: 2ch; margin-left: 1210px;" class="nav-link"> Back
 
     </li>
     
@@ -13,8 +13,8 @@
 <div class="bg-container">
     <div class="form-container ">
         <form [formGroup] = "loginForm" (ngSubmit) ="onSubmit()" class="m-3 mt-4" class="insidefrom" style="margin-top: 190px;">
-           <label style="margin-left: 120px;font-size: 2.5ch;">Login</label>
-            <p  class="crediential-names mt-3 login-text">User Mail</p>
+           <label style="margin-left: 80px;font-size: 2.5ch;"> Admin Login</label>
+            <p  class="crediential-names mt-3 login-text">Admin Mail</p>
             <input type="text" placeholder="Enter mail"  formControlName="adminEmail" class="mail">
             <br> 
             <span style="color: red;" class="warning-msg" *ngIf="f.adminEmail && f.adminEmail.invalid && f.adminEmail.touched">*Required</span>
@@ -32,7 +32,7 @@
                 <button type="submit" class="btn btn-success m-0 border border-dark" >Login</button>
              </div>
              <br>
-            <p style="color: red;"  class="warning-msg1 text-center">Don't have an account? <a routerLink="/sregister" class="link-primary">SingUp</a></p>
+            <p style="color: red;"  class="warning-msg1 text-center">Don't have an account? <a routerLink="/sregister" class="link-primary">Register</a></p>
             <br>
         </form>
     </div>

@@ -37,7 +37,7 @@ export class BrandListComponent implements OnInit {
     this.router.navigate(['/brands']);
   }
   goToHomepage(){
-    this.router.navigate(['/homepage'])
+    this.router.navigate(['/showrooms'])
   }
 
   goToShowroomList(){
